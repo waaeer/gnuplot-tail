@@ -1,0 +1,24 @@
+#!/usr/bin/perl -w
+use strict;
+
+use Time::HiRes qw/sleep/;
+
+
+my @out;
+foreach my $file (@ARGV) {  # open tails
+
+	open (my $fh, '>', $file) || die("Cannot open $file: $!");
+	select((select($fh), $| = 1)[0]);
+	push @out, $fh;
+}
+
+for(my $x=0;;$x++) {
+  for(my $i=0;$i<=$#out;$i++) {
+	my $fh = $out[$i];
+	print $fh $x, ' ', sin($x*0.01*($i+1)),"\n";
+  }
+  sleep(0.02);
+}
+
+
+

@@ -2,7 +2,7 @@
 A graphical tail utility using gnuplot to plot a dynamically changing graph.
 tails one or more files with (x,y) pairs and draws independed graphs on signle gnuplot canvas.
 
-## usage
+## Usage
 
 	perl gnuplot-tail	[--window DELTA] [--sleep SECONDS] file1 file2 file3
 
@@ -12,8 +12,13 @@ tails one or more files with (x,y) pairs and draws independed graphs on signle g
 
 * sleep : the pause between reading the files inseconds, can be fractional. Default is 1 second.
 
-## preprequisites
+## Prerequisites
 
 * Gnuplot
 * perl
+
+## Example
+
+	perl gnuplot-tail-demo file1 file2 file3 &  ## generates demo data
+	perl gnuplot-tail      file1 file2 file3
 
