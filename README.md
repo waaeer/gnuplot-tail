@@ -1,6 +1,6 @@
 # gnuplot-tail
 A graphical tail utility using gnuplot to plot a dynamically changing graph.
-tails one or more files with (x,y) pairs and draws independed graphs on signle gnuplot canvas.
+tails one or more files with (x,y) pairs and draws independed graphs on a single gnuplot canvas.
 
 ## Usage
 
@@ -10,7 +10,7 @@ tails one or more files with (x,y) pairs and draws independed graphs on signle g
 
 * window : if defined, DELTA is maximal range of X axis. [max-DELTA:max]
 
-* sleep : the pause between reading the files inseconds, can be fractional. Default is 1 second.
+* sleep : the pause between reading the files in seconds, can be fractional. Default is 1 second.
 
 ## Prerequisites
 
